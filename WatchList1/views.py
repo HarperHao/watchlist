@@ -7,8 +7,8 @@ FUNCTION:  视图函数
 from flask import render_template, request, url_for, redirect, flash
 from flask_login import login_user, login_required, current_user
 # 引入app对象和数据库对象db
-from WatchList import app, db
-from WatchList.models import User, Movie
+from WatchList1 import app, db
+from WatchList1.models import User, Movie
 
 
 # 主视图

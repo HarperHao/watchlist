@@ -22,7 +22,7 @@ login_manager = LoginManager(app)
 # 用户回调函数
 @login_manager.user_loader
 def load_user(user_id):
-    from WatchList.models import User
+    from WatchList1.models import User
     # 用user_id作为主键去查询对应的用户
     user = User.query.get(int(user_id))
     return user
@@ -34,10 +34,9 @@ login_manager.login_view = 'login'
 # 模版上下文处理函数
 @app.context_processor
 def inject_user():
-    from WatchList.models import User
+    from WatchList1.models import User
     user = User.query.first()
     # 返回{'user':'user'}
     return dict(user=user)
 
-
-from WatchList import commands, views, errors
+from WatchList1 import commands,views,errors

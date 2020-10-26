@@ -4,7 +4,7 @@ TIME    ： 2020/10/26
 FUNCTION:  错误处理函数
 """
 from flask import render_template
-from WatchList import app
+from WatchList1 import app
 
 
 # 404错误处理函数

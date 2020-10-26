@@ -7,7 +7,7 @@ FUNCTION:  模型类
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from WatchList import db
+from WatchList1 import db
 
 
 # 构造数据库模型

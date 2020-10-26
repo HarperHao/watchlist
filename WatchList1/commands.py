@@ -6,8 +6,8 @@ FUNCTION:  命令函数
 
 import click
 
-from WatchList import app, db
-from WatchList.models import User, Movie
+from WatchList1 import app, db
+from WatchList1.models import User, Movie
 
 
 @app.cli.command()
