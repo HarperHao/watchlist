@@ -39,4 +39,5 @@ def inject_user():
     # 返回{'user':'user'}
     return dict(user=user)
 
-from WatchList1 import commands,views,errors
+
+from WatchList1 import commands, views, errors

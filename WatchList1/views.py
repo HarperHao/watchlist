@@ -5,7 +5,7 @@ FUNCTION:  视图函数
 """
 
 from flask import render_template, request, url_for, redirect, flash
-from flask_login import login_user, login_required, current_user
+from flask_login import login_user, login_required, current_user, logout_user
 # 引入app对象和数据库对象db
 from WatchList1 import app, db
 from WatchList1.models import User, Movie
@@ -125,3 +125,11 @@ def login():
                 flash('用户名或密码错误！')
                 return redirect(url_for('login'))
     return render_template('login.html')
+
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('Goodbye.')
+    return redirect(url_for('index'))
